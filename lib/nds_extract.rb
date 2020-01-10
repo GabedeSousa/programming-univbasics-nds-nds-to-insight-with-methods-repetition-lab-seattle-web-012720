@@ -26,7 +26,15 @@ end
 
 def list_of_directors(source)
   # Write this implementation
-  
+  new_array = []
+   i = 0
+
+    while i < source.length do
+     stooges = source[i][:name]
+     new_array << stooges
+     i += 1
+ end
+ new_array
 end
 
 def total_gross(source)
