@@ -3,11 +3,11 @@ require_relative './directors_database'
 
 def directors_totals(source)
   result = {}
-  director_index = 0
-  while director_index < source.size do
-    director = source[director_index]
+  directors_index = 0
+  while directors_index < source.length do 
+    director = source[directors_index]
     result[director[:name]] = gross_for_director(director)
-    director_index += 1
+    directors_index += 1
   end
   result
 end
@@ -24,17 +24,18 @@ def gross_for_director(d)
   total
 end
 
+
 def list_of_directors(source)
   # Write this implementation
-  new_array = []
-   i = 0
+  novo_array = []
+  contagem = 0
 
-    while i < source.length do
-     stooges = source[i][:name]
-     new_array << stooges
-     i += 1
- end
- new_array
+  while contagem < source.length do 
+    parças = source[contagem][:name]
+    novo_array << parças
+    contagem += 1
+  end
+  novo_array
 end
 
 def total_gross(source)
@@ -59,6 +60,7 @@ def total_gross(source)
  end
  total
 end
+
 
 
 
